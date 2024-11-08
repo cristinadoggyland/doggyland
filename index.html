@@ -21,6 +21,12 @@
       .mask:hover {
         filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(290deg) brightness(95%) contrast(90%);
       }
+      .paw.white {
+        filter: invert(100%);
+      }
+      .paw.pink {
+        filter: invert(36%) sepia(82%) saturate(7483%) hue-rotate(306deg) brightness(95%) contrast(101%);
+      }
     </style>
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
@@ -28,9 +34,15 @@
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <img src="img/doggy.svg" alt="dog" class="h-8 fill-current inline" />
-            DOGGYLAND
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex" href="#">
+            <img src="img/doggy.svg" alt="dog" class="h-8 fill-current inline mt-1" />
+            <div class="flex">
+              <div>D</div>
+              <div class="w-6 lg:w-8 mx-1 flex">
+                <img src="img/paw.svg" id="pawLogo" class="paw white" />
+              </div>
+              <div>GGYLAND</div>
+            </div>
           </a>
         </div>
         <div class="block lg:hidden pr-4">
@@ -45,20 +57,23 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <!-- <li class="mr-3">
               <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
-            </li>
-            <li class="mr-3">
+            </li>  -->
+            <!-- <li class="mr-3">
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li>
             <li class="mr-3">
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li> -->
           </ul>
+          <select class="mr-3 text-sm rounded-lg p-2.5 bg-transparent text-white font-bold text-lg" id="languageSwitcher">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
           <button
             onclick="openModal()"
             id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
-            Contact Us
           </button>
         </div>
       </div>
@@ -69,15 +84,14 @@
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <p class="uppercase tracking-loose w-full">Welcome to</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">
-            Doggyland - Trusted Dog Daycare
+          <p id="mainTitle" class="uppercase tracking-loose w-full">Welcome to</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight" id="mainDescription">
           </h1>
-          <p class="w-full leading-normal text-2xl mb-8 text-center md:text-left">
+          <!-- <p class="w-full leading-normal text-2xl mb-8 text-center md:text-left">
             Where your dog feels at home
-          </p>
-          <button onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            Contact Us
+          </p> -->
+          <button id="cta1" onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            
           </button>
         </div>
         <!--Right Col-->
@@ -105,25 +119,17 @@
         </g>
       </svg>
     </div>
-    <section class="bg-white py-8">
+    <section class="bg-white py-8 border-b">
       <div class="container max-w-5xl mx-auto m-8">
-        <div class="text-gray-800 text-center p-6 text-xl mb-2">
-            Looking for the perfect place where your dog can have fun while you take care of your tasks? At Doggyland, we offer a unique experience of care and entertainment for your best friend.
-        </div>
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Our Services Include:
-        </h2>
+        <div class="text-gray-800 text-center p-6 text-xl mb-2" id="secondaryDescription"></div>
+        <h2 id="servicesHeading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Dog Training:
-            </h3>
-            <p class="text-gray-600 mb-8">
-              Reinforce positive beahvior in your dog.
-            </p>
+            <h3 id="service1Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+            <p id="service1Description" class="text-gray-600 mb-8"></p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
             <img src="img/training.svg" alt="Dog Training" class="w-full sm:h-64 mx-auto" />
@@ -131,54 +137,45 @@
         </div>
         <div class="flex flex-wrap flex-col-reverse sm:flex-row">
           <div class="w-full sm:w-1/2 p-6 mt-6">
-            <img src="img/socialization.svg" alt="Socialization" class="w-full sm:h-64 mx-auto" />
+            <img src="img/entertainment.svg" alt="Entertainment" class="w-full sm:h-64 mx-auto" />           
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Socialization
-              </h3>
-              <p class="text-gray-600 mb-8">
-                Your dog will make friends and have fun all day!
-              </p>
+              <h3 id="service2Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+              <p id="service2Description" class="text-gray-600 mb-8"></p>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap">
             <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Entertainment and Exercise:
-              </h3>
-              <p class="text-gray-600 mb-8">
-                Play sessions and physical activities tailored to their needs.
-              </p>
+              <h3 id="service3Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+              <p id="service3Description" class="text-gray-600 mb-8"></p>
             </div>
             <div class="w-full sm:w-1/2 p-6">
-              <img src="img/entertainment.svg" alt="Entertainment" class="w-full sm:h-64 mx-auto" />
+              <img src="img/excursions.svg" alt="Excursions" class="w-full sm:h-64 mx-auto" />
           </div>
         </div>
-        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-            <div class="w-full sm:w-1/2 p-6 mt-6">
-              <img src="img/excursions.svg" alt="Excursions" class="w-full sm:h-64 mx-auto" />
-            </div>
-            <div class="w-full sm:w-1/2 p-6 mt-6">
-              <div class="align-middle">
-                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                  Daily Excursions:
-                </h3>
-                <p class="mb-8">
-                  <ul class="text-gray-600">
-                    <li>Beach</li>
-                    <li>Mountain</li>
-                    <li>Parks</li>
-                 </ul>
-                </p>
-              </div>
-            </div>
-          </div>
       </div>
     </section>
-    <section class="bg-white border-b py-8">
+    <section class="bg-gray-100 py-8 border-b">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 id="section3Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <div class="w-full">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div id="section3Description" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+      </div>
+    </section>
+    <section class="bg-white py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 id="section4Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <div class="w-full">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div id="section4Description" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+      </div>
+    </section>
+    <!-- <section class="bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Title
@@ -334,7 +331,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Change the colour #fff to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -358,16 +355,12 @@
       </g>
     </svg>
     <section class="container mx-auto text-center py-6 mb-12">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
-        Only &euro;30 per day!
-      </h2>
+      <h2 id="section5Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"></h2>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
-      <h3 class="my-4 text-3xl leading-tight">
-        Don't hesitate, give your dog the care they deserve!
-      </h3>
-      <button onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <h3 id="section5Description" class="my-4 text-3xl leading-tight"></h3>
+      <button id="cta2" onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Contact Us
       </button>
     </section>
@@ -498,8 +491,12 @@
       document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
-
+        const languageSwitcher = document.getElementById('languageSwitcher');
+        const pawLogo = document.getElementById('pawLogo');
         if (scrollpos > 10) {
+          languageSwitcher.classList.add("text-gray-800");
+          pawLogo.classList.add("pink");
+          pawLogo.classList.remove("white");
           header.classList.add("bg-white");
           navaction.classList.remove("bg-white");
           navaction.classList.add("gradient");
@@ -514,6 +511,9 @@
           navcontent.classList.remove("bg-gray-100");
           navcontent.classList.add("bg-white");
         } else {
+          languageSwitcher.classList.remove("text-gray-800");
+          pawLogo.classList.add("white");
+          pawLogo.classList.remove("pink");
           header.classList.remove("bg-white");
           navaction.classList.remove("gradient");
           navaction.classList.add("bg-white");
@@ -573,6 +573,61 @@
       function closeModal() {
         document.getElementById("myModal").classList.add("hidden");
       }
+      // Language content
+      const content = {
+            en: {
+                mainTitle: "Welcome to Doggyland",
+                mainDescription: "Your trusted Daycare in Marbella",
+                navAction: "Contact Us",
+                cta1: "Contact Us",
+                cta2: "Contact Us",
+                secondaryDescription: "Looking for the perfect place where your dog can have fun while you take care of your tasks? At Doggyland we turn our passion into a profession, offering a unique experience of care, love and fun for your pet.",
+                servicesHeading: "Our Services Include:",
+                service1Heading: "Dog Training:",
+                service1Description: "Reinforce positive beahvior in your dog.",
+                service2Heading: "Socialization, entertainment and exercise:",
+                service2Description: "Fun, games and activities tailored to their needs.",
+                service3Heading: "Daily Excursions:",
+                service3Description: "Beach, Mountain and Parks",
+                section3Heading: "Constant communication with owners",
+                section3Description: "We'll keep you updated regulary so you always know how your loayal friend is doing under our care.",
+                section4Heading: "Every bark is welcome",
+                section4Description: "We know your comfort is important too. That's why we offer a home pick-up service. Our team will take care of picking up your furry friend.",
+                section5Heading: "Only €30 per day!",
+                section5Description: "Don't wait any longer. Give your dog the care they deserve and come home to a happy loved, and relaxed companion."
+            },
+            es: {
+                mainTitle: "Bienvenido a Doggyland",
+                mainDescription: "Tu guardería de confianza en Marbella",
+                navAction: "Contáctenos",
+                cta1: "Contáctenos",
+                cta2: "Contáctenos",
+                secondaryDescription: "¿Buscas el lugar perfecto donde tu perro disfrute mientras tú te ocupas de tus tareas diareas? En Doggyland convertimos nuestra pasión en profesión, ofreciendo una experiencia única de cuidado, amor y diversión para tu mascota.",
+                servicesHeading: "Nuestros Servicios Incluyen:",
+                service1Heading: "Adiestramiento Canino:",
+                service1Description: "Refuerza el comportamiento positivo de tu perro.",
+                service2Heading: "Socialización, entretenimiento y ejercicio:",
+                service2Description: "Diversión, juegos y actividades adaptadas a sus necesidades.",
+                service3Heading: "Excursiones Diarias:",
+                service3Description: "Playa, Montaña y Parque",
+                section3Heading: "Comunicación constante con los dueños",
+                section3Description: "Te mantendremos informado en todo momento con actualizaciones regulares para que siempre sepas cómo está tu fiel amigo bajo nuestro cuidado.",
+                section4Heading: "Cada ladrido es bienvenido",
+                section4Description: "Recuerda que para nosotros tu comodidad también es importante. Ofrecemos servicio de recogida a domicilio. Nuestro equipo se encargará de recoger a tu fiel amigo.",
+                section5Heading: "¡Solo €30 al día",
+                section5Description: "No dudes más. Dale a tu perro el cuidado que se merece y vuelve a casa con un compañero lleno de amor, feliz y muy relajado."
+            }
+      };
+      function handleLanguageChange(event) {
+            const selectedLanguage = event.target.value;
+            for (const key in content[selectedLanguage]) {
+                document.getElementById(key).textContent = content[selectedLanguage][key];
+            }
+      }
+      // Add event listener to the language switcher
+      document.getElementById('languageSwitcher').addEventListener('change', handleLanguageChange);
+      // Set the initial language
+      handleLanguageChange({ target: { value: 'en' } });
     </script>
   </body>
 </html>
