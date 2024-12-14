@@ -4,38 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-      DoggyLand - El mejor lugar para tu perro
-    </title>
+    <title>DoggyLand - El mejor lugar para tu perro</title>
     <meta name="description" content="Doggyland El mejor lugar para tu perro" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <meta
+      property="og:title"
+      content="DoggyLand - El mejor lugar para tu perro"
+    />
+    <meta
+      property="og:description"
+      content="¿Buscas el lugar perfecto donde tu perro disfrute mientras tú te ocupas de tus tareas diarias? En Doggyland convertimos nuestra pasión en profesión, ofreciendo una experiencia única de cuidado, amor y diversión para tu mascota."
+    />
+    <meta property="og:image" content="https://doggyland.es/img/doggy.svg" />
+    <meta property="og:url" content="https://doggyland.es/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="DoggyLand" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_CA" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:locale:alternate" content="en_IE" />
+    <meta property="og:locale:alternate" content="en_NZ" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
     <!--Replace with your tailwind.css once created-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+    />
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
       }
       .mask:hover {
-        filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(290deg) brightness(95%) contrast(90%);
+        filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(290deg)
+          brightness(95%) contrast(90%);
       }
       .paw.white {
         filter: invert(100%);
       }
       .paw.pink {
-        filter: invert(36%) sepia(82%) saturate(7483%) hue-rotate(306deg) brightness(95%) contrast(101%);
+        filter: invert(36%) sepia(82%) saturate(7483%) hue-rotate(306deg)
+          brightness(95%) contrast(101%);
       }
     </style>
   </head>
-  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <body
+    class="leading-normal tracking-normal text-white gradient"
+    style="font-family: 'Source Sans Pro', sans-serif"
+  >
     <!--Nav-->
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
+      >
         <div class="pl-4 flex items-center">
-          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex" href="#">
-            <img src="img/doggy.svg" alt="dog" class="h-8 fill-current inline mt-1" />
+          <a
+            class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl flex"
+            href="#"
+          >
+            <img
+              src="img/doggy.svg"
+              alt="dog"
+              class="h-8 fill-current inline mt-1"
+            />
             <div class="flex">
               <div>D</div>
               <div class="w-6 lg:w-8 mx-1 flex">
@@ -46,14 +83,24 @@
           </a>
         </div>
         <div class="block lg:hidden pr-4">
-          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <button
+            id="nav-toggle"
+            class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <svg
+              class="fill-current h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <!-- <li class="mr-3">
               <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
@@ -65,7 +112,10 @@
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li> -->
           </ul>
-          <select class="mr-3 text-sm rounded-lg p-2.5 bg-transparent font-bold text-lg" id="languageSwitcher">
+          <select
+            class="mr-3 text-sm rounded-lg p-2.5 bg-transparent font-bold text-lg"
+            id="languageSwitcher"
+          >
             <option value="es">ES</option>
             <option value="en">EN</option>
           </select>
@@ -73,45 +123,78 @@
             onclick="openModal()"
             id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-          </button>
+          ></button>
         </div>
       </div>
       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
     <!--Hero-->
     <div class="pt-24">
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div
+        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      >
         <!--Left Col-->
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <p id="mainTitle" class="uppercase tracking-loose w-full">Welcome to</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight" id="mainDescription">
-          </h1>
+        <div
+          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+        >
+          <p id="mainTitle" class="uppercase tracking-loose w-full">
+            Welcome to
+          </p>
+          <h1
+            class="my-4 text-5xl font-bold leading-tight"
+            id="mainDescription"
+          ></h1>
           <!-- <p class="w-full leading-normal text-2xl mb-8 text-center md:text-left">
             Where your dog feels at home
           </p> -->
-          <button id="cta1" onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            
-          </button>
+          <button
+            id="cta1"
+            onclick="openModal()"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          ></button>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-            <img class="w-full md:w-3/4 z-50" src="img/hero.svg" alt="Hero Image" />
+          <img
+            class="w-full md:w-3/4 z-50"
+            src="img/hero.svg"
+            alt="Hero Image"
+          />
         </div>
       </div>
     </div>
     <div class="relative -mt-12 lg:-mt-24">
-      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg
+        viewBox="0 0 1428 174"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+          <g
+            transform="translate(-2.000000, 44.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"
+            ></path>
             <path
               d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
               opacity="0.100000001"
             ></path>
-            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              id="Path-4"
+              opacity="0.200000003"
+            ></path>
           </g>
-          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <g
+            transform="translate(-4.000000, 76.000000)"
+            fill="#FFFFFF"
+            fill-rule="nonzero"
+          >
             <path
               d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
             ></path>
@@ -121,68 +204,124 @@
     </div>
     <section class="bg-white py-8 border-b">
       <div class="container max-w-5xl mx-auto m-8">
-        <div class="text-gray-800 text-center p-6 text-xl mb-2" id="secondaryDescription"></div>
-        <h2 id="servicesHeading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <div
+          class="text-gray-800 text-center p-6 text-xl mb-2"
+          id="secondaryDescription"
+        ></div>
+        <h2
+          id="servicesHeading"
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        ></h2>
         <div class="w-full mb-4">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
         </div>
         <div class="flex flex-wrap">
           <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 id="service1Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+            <h3
+              id="service1Heading"
+              class="text-3xl text-gray-800 font-bold leading-none mb-3"
+            ></h3>
             <p id="service1Description" class="text-gray-600 mb-8"></p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
-            <img src="img/training.svg" alt="Dog Training" class="w-full sm:h-64 mx-auto" />
+            <img
+              src="img/training.svg"
+              alt="Dog Training"
+              class="w-full sm:h-64 mx-auto"
+            />
           </div>
         </div>
         <div class="flex flex-wrap flex-col-reverse sm:flex-row">
           <div class="w-full sm:w-1/2 p-6 mt-6">
-            <img src="img/entertainment.svg" alt="Entertainment" class="w-full sm:h-64 mx-auto" />           
+            <img
+              src="img/entertainment.svg"
+              alt="Entertainment"
+              class="w-full sm:h-64 mx-auto"
+            />
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <h3 id="service2Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+              <h3
+                id="service2Heading"
+                class="text-3xl text-gray-800 font-bold leading-none mb-3"
+              ></h3>
               <p id="service2Description" class="text-gray-600 mb-8"></p>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 id="service3Heading" class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
-              <p id="service3Description" class="text-gray-600 mb-8"></p>
-            </div>
-            <div class="w-full sm:w-1/2 p-6">
-              <img src="img/excursions.svg" alt="Excursions" class="w-full sm:h-64 mx-auto" />
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3
+              id="service3Heading"
+              class="text-3xl text-gray-800 font-bold leading-none mb-3"
+            ></h3>
+            <p id="service3Description" class="text-gray-600 mb-8"></p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img
+              src="img/excursions.svg"
+              alt="Excursions"
+              class="w-full sm:h-64 mx-auto"
+            />
           </div>
         </div>
       </div>
     </section>
     <section class="bg-gray-100 py-8 border-b">
       <div class="container max-w-5xl mx-auto m-8">
-        <h2 id="section3Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <h2
+          id="section3Heading"
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        ></h2>
         <div class="w-full">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
         </div>
-        <div id="section3Description" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+        <div
+          id="section3Description"
+          class="text-gray-800 text-center p-6 text-xl mb-2"
+        ></div>
       </div>
     </section>
     <section class="bg-white py-8">
       <div class="container max-w-5xl mx-auto m-8">
-        <h2 id="section4Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <h2
+          id="section4Heading"
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        ></h2>
         <div class="w-full">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
         </div>
-        <div id="section4Description" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+        <div
+          id="section4Description"
+          class="text-gray-800 text-center p-6 text-xl mb-2"
+        ></div>
       </div>
     </section>
     <section class="bg-gray-100 py-8">
       <div class="container max-w-5xl mx-auto m-8">
-        <h2 id="aboutUsHeading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <h2
+          id="aboutUsHeading"
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
+        ></h2>
         <div class="w-full">
-          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
         </div>
-        <div id="aboutUsSection1" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
-        <div id="aboutUsSection2" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+        <div
+          id="aboutUsSection1"
+          class="text-gray-800 text-center p-6 text-xl mb-2"
+        ></div>
+        <div
+          id="aboutUsSection2"
+          class="text-gray-800 text-center p-6 text-xl mb-2"
+        ></div>
       </div>
     </section>
     <!-- <section class="bg-white border-b py-8">
@@ -343,7 +482,13 @@
       </div>
     </section> -->
     <!-- Change the colour #fff to match the previous section colour -->
-    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg
+      class="wave-top"
+      viewBox="0 0 1439 147"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
           <g class="wave" fill="#f3f4f6">
@@ -352,25 +497,42 @@
             ></path>
           </g>
           <g transform="translate(1.000000, 15.000000)" fill="#f3f4f6">
-            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
-              <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <g
+              transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) "
+            >
+              <path
+                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                opacity="0.100000001"
+              ></path>
               <path
                 d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
                 opacity="0.100000001"
               ></path>
-              <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+              <path
+                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                opacity="0.200000003"
+              ></path>
             </g>
           </g>
         </g>
       </g>
     </svg>
     <section class="container mx-auto text-center py-6 mb-12">
-      <h2 id="section5Heading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"></h2>
+      <h2
+        id="section5Heading"
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"
+      ></h2>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+        ></div>
       </div>
       <h3 id="section5Description" class="my-4 text-3xl leading-tight"></h3>
-      <button id="cta2" onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <button
+        id="cta2"
+        onclick="openModal()"
+        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+      >
         Contact Us
       </button>
     </section>
@@ -378,17 +540,27 @@
     <footer class="bg-white">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 text-gray-800 flex-1 flex items-center md:mb-0 mb-4 justify-start">
+          <div
+            class="flex-1 text-gray-800 flex-1 flex items-center md:mb-0 mb-4 justify-start"
+          >
             <div class="flex md:flex-1">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500 flex items-center">
-                    <img class="h-7 mask" src="img/instagram.svg" alt="instagram"/>
-                </a>
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500 ml-2 items-center flex">
-                    <img class="h-6 mask" src="img/facebook.svg" alt="facebook"/>
-                </a>
-                <div class="text-gray-600 hover:text-pink-500 ml-2 flex items-center">
-                    <div>+34 123 456 789</div>
-                </div>
+              <a
+                href="#"
+                class="no-underline hover:underline text-gray-800 hover:text-pink-500 flex items-center"
+              >
+                <img class="h-7 mask" src="img/instagram.svg" alt="instagram" />
+              </a>
+              <a
+                href="#"
+                class="no-underline hover:underline text-gray-800 hover:text-pink-500 ml-2 items-center flex"
+              >
+                <img class="h-6 mask" src="img/facebook.svg" alt="facebook" />
+              </a>
+              <div
+                class="text-gray-600 hover:text-pink-500 ml-2 flex items-center"
+              >
+                <div>+34 123 456 789</div>
+              </div>
             </div>
           </div>
           <div class="text-gray-400">
@@ -455,37 +627,62 @@
       </div>
       <!-- <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a> -->
     </footer>
-     <!-- Modal -->
-     <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
-            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div class="sm:flex sm:items-start">
-                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-pink-100 sm:mx-0 sm:h-10 sm:w-10">
-                        <!-- Icon -->
-                        <svg class="h-6 w-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"></path>
-                        </svg>
-                    </div>
-                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                            Our Contacts
-                        </h3>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-500">
-                                Contact information: <br>
-                                <strong>Phone:</strong> +34 123 456 789 <br>
-                                <strong>Email:</strong> test@test.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Modal -->
+    <div
+      id="myModal"
+      class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div
+        class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full"
+      >
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div
+              class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-pink-100 sm:mx-0 sm:h-10 sm:w-10"
+            >
+              <!-- Icon -->
+              <svg
+                class="h-6 w-6 text-pink-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+                ></path>
+              </svg>
             </div>
-            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button onclick="closeModal()" id="closeModal" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-pink-600 text-base font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 sm:ml-3 sm:w-auto sm:text-sm">
-                    Close
-                </button>
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3
+                class="text-lg leading-6 font-medium text-gray-900"
+                id="modal-title"
+              >
+                Our Contacts
+              </h3>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">
+                  Contact information: <br />
+                  <strong>Phone:</strong> +34 123 456 789 <br />
+                  <strong>Email:</strong> test@test.com
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <button
+            onclick="closeModal()"
+            id="closeModal"
+            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-pink-600 text-base font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 sm:ml-3 sm:w-auto sm:text-sm"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     </div>
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -501,8 +698,8 @@
       document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
-        const languageSwitcher = document.getElementById('languageSwitcher');
-        const pawLogo = document.getElementById('pawLogo');
+        const languageSwitcher = document.getElementById("languageSwitcher");
+        const pawLogo = document.getElementById("pawLogo");
         if (scrollpos > 10) {
           languageSwitcher.classList.add("text-gray-800");
           pawLogo.classList.add("pink");
@@ -584,66 +781,83 @@
       }
       // Language content
       const content = {
-            en: {
-                mainTitle: "Welcome to Doggyland",
-                mainDescription: "Your trusted Daycare in Marbella",
-                navAction: "Contact Us",
-                cta1: "Contact Us",
-                cta2: "Contact Us",
-                secondaryDescription: "Looking for the perfect place where your dog can have fun while you take care of your tasks? At Doggyland we turn our passion into a profession, offering a unique experience of care, love and fun for your pet.",
-                servicesHeading: "Our Services Include:",
-                service1Heading: "Dog Training:",
-                service1Description: "Reinforce positive beahvior in your dog.",
-                service2Heading: "Socialization, entertainment and exercise:",
-                service2Description: "Fun, games and activities tailored to their needs.",
-                service3Heading: "Daily Excursions:",
-                service3Description: "Beach, Mountain and Parks",
-                section3Heading: "Constant communication with owners",
-                section3Description: "We'll keep you updated regulary so you always know how your loayal friend is doing under our care.",
-                section4Heading: "Every bark is welcome",
-                section4Description: "We know your comfort is important too. That's why we offer a home pick-up service. Our team will take care of picking up your furry friend.",
-                section5Heading: "Only €30 per day!",
-                section5Description: "Don't wait any longer. Give your dog the care they deserve and come home to a happy loved, and relaxed companion.",
-                aboutUsHeading: "About Us",
-                aboutUsSection1: "At DoggyLand, we care for your dog with the love, respect, and experience they deserve. Since I was little, I’ve always felt a special connection with animals, especially dogs. I remember, as a child, sitting on the ground with dogs much bigger than me, and my mother would let me do what I felt in my heart because she knew there was nothing that could stop me. I’ve petted every dog I’ve met throughout my life, and in each encounter, I found respect and affection, because they sense energy and understand the purity of intention.",
-                aboutUsSection2: "Being able to spend our days caring for dogs is a privilege we truly cherish. We treat every dog that comes here like family, with the same love and care we’d give to our own furry friends. We want you to feel at peace leaving them in our hands, knowing they are in a safe place, filled with love and surrounded by people who not only understand and respect them, but also have the knowledge and training to provide the best possible care.",
-            },
-            es: {
-                mainTitle: "Bienvenido a Doggyland",
-                mainDescription: "Tu guardería de confianza en Marbella",
-                navAction: "Contáctenos",
-                cta1: "Contáctenos",
-                cta2: "Contáctenos",
-                secondaryDescription: "¿Buscas el lugar perfecto donde tu perro disfrute mientras tú te ocupas de tus tareas diarias? En Doggyland convertimos nuestra pasión en profesión, ofreciendo una experiencia única de cuidado, amor y diversión para tu mascota.",
-                servicesHeading: "Nuestros Servicios Incluyen:",
-                service1Heading: "Adiestramiento Canino:",
-                service1Description: "Refuerza el comportamiento positivo de tu perro.",
-                service2Heading: "Socialización, entretenimiento y ejercicio:",
-                service2Description: "Diversión, juegos y actividades adaptadas a sus necesidades.",
-                service3Heading: "Excursiones Diarias:",
-                service3Description: "Playa, Montaña y Parque",
-                section3Heading: "Comunicación constante con los dueños",
-                section3Description: "Te mantendremos informado en todo momento con actualizaciones regulares para que siempre sepas cómo está tu fiel amigo bajo nuestro cuidado.",
-                section4Heading: "Cada ladrido es bienvenido",
-                section4Description: "Recuerda que para nosotros tu comodidad también es importante. Ofrecemos servicio de recogida a domicilio. Nuestro equipo se encargará de recoger a tu fiel amigo.",
-                section5Heading: "¡Solo €30 al día",
-                section5Description: "No dudes más. Dale a tu perro el cuidado que se merece y vuelve a casa con un compañero lleno de amor, feliz y muy relajado.",
-                aboutUsHeading: "Sobre Nosotros",
-                aboutUsSection1: "En DoggyLand, nos dedicamos al cuidado de tu perro con el amor, el respeto y la experiencia que merece. Desde que era pequeña, siempre he sentido una conexión especial con los animales, especialmente con los perros. Recuerdo cómo, siendo una niña, me sentaba en el suelo junto a perros enormes y mi madre me dejaba hacer lo que sentía en el corazón porque sabía que no había nada que me detuviera. He acariciado a todos los perros que he conocido a lo largo de mi vida, y en cada encuentro siempre encontré respeto y cariño, porque ellos sienten la energía y entienden la pureza de la intención.", 
-                aboutUsSection2: "Poder dedicar nuestro día a día al cuidado de los perros es, sin duda, un privilegio que valoramos profundamente. Tratamos a cada perro que llega aquí como parte de nuestra familia, con el mismo amor y atención con el que cuidaríamos a nuestros propios amigos peludos. Queremos que te sientas en paz al dejarlos en nuestras manos, sabiendo que están en un lugar seguro, lleno de cariño y rodeados de personas que no solo los entienden y respetan, sino que también cuentan con el conocimiento y preparación necesarios para brindarles el mejor cuidado.", 
-
-              }
+        en: {
+          mainTitle: "Welcome to Doggyland",
+          mainDescription: "Your trusted Daycare in Marbella",
+          navAction: "Contact Us",
+          cta1: "Contact Us",
+          cta2: "Contact Us",
+          secondaryDescription:
+            "Looking for the perfect place where your dog can have fun while you take care of your tasks? At Doggyland we turn our passion into a profession, offering a unique experience of care, love and fun for your pet.",
+          servicesHeading: "Our Services Include:",
+          service1Heading: "Dog Training:",
+          service1Description: "Reinforce positive beahvior in your dog.",
+          service2Heading: "Socialization, entertainment and exercise:",
+          service2Description:
+            "Fun, games and activities tailored to their needs.",
+          service3Heading: "Daily Excursions:",
+          service3Description: "Beach, Mountain and Parks",
+          section3Heading: "Constant communication with owners",
+          section3Description:
+            "We'll keep you updated regulary so you always know how your loayal friend is doing under our care.",
+          section4Heading: "Every bark is welcome",
+          section4Description:
+            "We know your comfort is important too. That's why we offer a home pick-up service. Our team will take care of picking up your furry friend.",
+          section5Heading: "Only €30 per day!",
+          section5Description:
+            "Don't wait any longer. Give your dog the care they deserve and come home to a happy loved, and relaxed companion.",
+          aboutUsHeading: "About Us",
+          aboutUsSection1:
+            "At DoggyLand, we care for your dog with the love, respect, and experience they deserve. Since I was little, I’ve always felt a special connection with animals, especially dogs. I remember, as a child, sitting on the ground with dogs much bigger than me, and my mother would let me do what I felt in my heart because she knew there was nothing that could stop me. I’ve petted every dog I’ve met throughout my life, and in each encounter, I found respect and affection, because they sense energy and understand the purity of intention.",
+          aboutUsSection2:
+            "Being able to spend our days caring for dogs is a privilege we truly cherish. We treat every dog that comes here like family, with the same love and care we’d give to our own furry friends. We want you to feel at peace leaving them in our hands, knowing they are in a safe place, filled with love and surrounded by people who not only understand and respect them, but also have the knowledge and training to provide the best possible care.",
+        },
+        es: {
+          mainTitle: "Bienvenido a Doggyland",
+          mainDescription: "Tu guardería de confianza en Marbella",
+          navAction: "Contáctenos",
+          cta1: "Contáctenos",
+          cta2: "Contáctenos",
+          secondaryDescription:
+            "¿Buscas el lugar perfecto donde tu perro disfrute mientras tú te ocupas de tus tareas diarias? En Doggyland convertimos nuestra pasión en profesión, ofreciendo una experiencia única de cuidado, amor y diversión para tu mascota.",
+          servicesHeading: "Nuestros Servicios Incluyen:",
+          service1Heading: "Adiestramiento Canino:",
+          service1Description:
+            "Refuerza el comportamiento positivo de tu perro.",
+          service2Heading: "Socialización, entretenimiento y ejercicio:",
+          service2Description:
+            "Diversión, juegos y actividades adaptadas a sus necesidades.",
+          service3Heading: "Excursiones Diarias:",
+          service3Description: "Playa, Montaña y Parque",
+          section3Heading: "Comunicación constante con los dueños",
+          section3Description:
+            "Te mantendremos informado en todo momento con actualizaciones regulares para que siempre sepas cómo está tu fiel amigo bajo nuestro cuidado.",
+          section4Heading: "Cada ladrido es bienvenido",
+          section4Description:
+            "Recuerda que para nosotros tu comodidad también es importante. Ofrecemos servicio de recogida a domicilio. Nuestro equipo se encargará de recoger a tu fiel amigo.",
+          section5Heading: "¡Solo €30 al día",
+          section5Description:
+            "No dudes más. Dale a tu perro el cuidado que se merece y vuelve a casa con un compañero lleno de amor, feliz y muy relajado.",
+          aboutUsHeading: "Sobre Nosotros",
+          aboutUsSection1:
+            "En DoggyLand, nos dedicamos al cuidado de tu perro con el amor, el respeto y la experiencia que merece. Desde que era pequeña, siempre he sentido una conexión especial con los animales, especialmente con los perros. Recuerdo cómo, siendo una niña, me sentaba en el suelo junto a perros enormes y mi madre me dejaba hacer lo que sentía en el corazón porque sabía que no había nada que me detuviera. He acariciado a todos los perros que he conocido a lo largo de mi vida, y en cada encuentro siempre encontré respeto y cariño, porque ellos sienten la energía y entienden la pureza de la intención.",
+          aboutUsSection2:
+            "Poder dedicar nuestro día a día al cuidado de los perros es, sin duda, un privilegio que valoramos profundamente. Tratamos a cada perro que llega aquí como parte de nuestra familia, con el mismo amor y atención con el que cuidaríamos a nuestros propios amigos peludos. Queremos que te sientas en paz al dejarlos en nuestras manos, sabiendo que están en un lugar seguro, lleno de cariño y rodeados de personas que no solo los entienden y respetan, sino que también cuentan con el conocimiento y preparación necesarios para brindarles el mejor cuidado.",
+        },
       };
       function handleLanguageChange(event) {
-            const selectedLanguage = event.target.value;
-            for (const key in content[selectedLanguage]) {
-                document.getElementById(key).textContent = content[selectedLanguage][key];
-            }
+        const selectedLanguage = event.target.value;
+        for (const key in content[selectedLanguage]) {
+          document.getElementById(key).textContent =
+            content[selectedLanguage][key];
+        }
       }
       // Add event listener to the language switcher
-      document.getElementById('languageSwitcher').addEventListener('change', handleLanguageChange);
+      document
+        .getElementById("languageSwitcher")
+        .addEventListener("change", handleLanguageChange);
       // Set the initial language
-      handleLanguageChange({ target: { value: 'es' } });
+      handleLanguageChange({ target: { value: "es" } });
     </script>
   </body>
 </html>
